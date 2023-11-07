@@ -1,0 +1,5 @@
+--language=c++
+-std=c++17
+-I../Musicat/libs/DPP/include
+-L../Musicat/build/libs/DPP/library
+-ldpp
