@@ -71,7 +71,7 @@ void handle_streaming(const dpp::voice_ready_t event) {
   ssize_t buf_read = 0;
   ssize_t current_read = 0;
 
-  while ((current_read = fread(buf, 1, bufsize - buf_read, read_stream)) > 0) {
+  while ((current_read = fread(buf + buf_read, 1, bufsize - buf_read, read_stream)) > 0) {
     buf_read += current_read;
 
     // queue buffer only when it's exactly `bufsize` size
